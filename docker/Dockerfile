@@ -6,7 +6,7 @@ RUN apt-get install -y wget unzip xvfb x11vnc xterm i3
 # Game + ModLoader
 RUN mkdir -p /data/Stardew && \
     mkdir -p /data/nexus && \
-    wget https://eris.cc/Stardew_latest.tar.gz -qO /data/latest.tar.gz && \
+    wget https://file.mari0.dev/StardewValley.tar.gz -qO /data/latest.tar.gz && \
     tar xf /data/latest.tar.gz -C /data/Stardew && \
     rm /data/latest.tar.gz && \
     wget https://github.com/Pathoschild/SMAPI/releases/download/3.8.3/SMAPI-3.8.3-installer.zip -qO /data/nexus.zip && \
@@ -23,6 +23,9 @@ RUN unzip /data/alwayson.zip -d /data/Stardew/Stardew\ Valley/Mods && \
     unzip /data/autoloadgame.zip -d /data/Stardew/Stardew\ Valley/Mods && \
     rm /data/alwayson.zip /data/unlimitedplayers.zip /data/autoloadgame.zip
 RUN chmod +x /data/Stardew/Stardew\ Valley/StardewValley
+
+#RUN wget https://github.com/mari0theminer/StardewValleyMODSFolder/archive/latest.zip  -qO /data/latestMods.tar.gz && \
+#    tar xf /data/latest.tar.gz -C /data/Stardew && \
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
