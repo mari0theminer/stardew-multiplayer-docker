@@ -6,6 +6,11 @@ this is the unircornsrange server
 
 This project aims to autostart a Stardew Valley Multiplayer Server as easy as possible.
 
+## Side Note
+
+ - Updating to most recent version requires a rebuild: `docker-compose build --no-cache` 
+ - Although I'm trying to put out updates, I don't have the time for testing, so I recommend forking and fixing things on your own.
+
 ## Setup
 
 ### Docker-Compose
