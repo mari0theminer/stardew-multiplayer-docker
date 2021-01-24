@@ -24,7 +24,7 @@ RUN unzip /data/alwayson.zip -d /data/Stardew/Stardew\ Valley/Mods && \
     rm /data/alwayson.zip /data/unlimitedplayers.zip /data/autoloadgame.zip
 RUN chmod +x /data/Stardew/Stardew\ Valley/StardewValley
 
-RUN wget https://github.com/mari0theminer/stardew-modpack-eden/archive/latest.zip  -qO /data/latestMods.tar.gz && \
+RUN wget https://github.com/mari0theminer/stardew-modpack-eden/archive/2.zip  -qO /data/latestMods.tar.gz && \
     tar xf /data/latest.tar.gz -C /data/Stardew 
 RUN COPY docker-entrypoint.sh /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
