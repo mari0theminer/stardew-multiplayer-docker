@@ -25,6 +25,6 @@ RUN unzip /data/alwayson.zip -d /data/Stardew/Stardew\ Valley/Mods && \
 RUN chmod +x /data/Stardew/Stardew\ Valley/StardewValley
  COPY docker-entrypoint.sh /docker-entrypoint.sh
  RUN wget https://github.com/mari0theminer/stardew-modpack-eden/archive/2.zip  -qO /data/latestMods.zip && \
-    unzip /data/latestMods.zip -d /data/Stardew 
+    unzip /data/latestMods.zip -d /data/Stardew/Stardew\ Valley/Mods
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
